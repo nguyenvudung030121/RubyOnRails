@@ -1,0 +1,77 @@
+<%= form_with(model: ql_tv) do |form| %>
+  <% if ql_tv.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(ql_tv.errors.count, "error") %> prohibited this ql_tv from being saved:</h2>
+
+      <ul>
+        <% ql_tv.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :stt, style: "display: block" %>
+    <%= form.number_field :stt %>
+  </div>
+
+  <div>
+    <%= form.label :maHS, style: "display: block" %>
+    <%= form.text_field :maHS %>
+  </div>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :lop, style: "display: block" %>
+    <%= form.text_field :lop %>
+  </div>
+
+  <div>
+    <%= form.label :maSach, style: "display: block" %>
+    <%= form.text_field :maSach %>
+  </div>
+
+  <div>
+    <%= form.label :tenSach, style: "display: block" %>
+    <%= form.text_field :tenSach %>
+  </div>
+
+  <div>
+    <%= form.label :tenTG, style: "display: block" %>
+    <%= form.text_field :tenTG %>
+  </div>
+
+  <div>
+    <%= form.label :tuSach, style: "display: block" %>
+    <%= form.text_field :tuSach %>
+  </div>
+
+  <div>
+    <%= form.label :soBM, style: "display: block" %>
+    <%= form.text_field :soBM %>
+  </div>
+
+  <div>
+    <%= form.label :ngayMuon, style: "display: block" %>
+    <%= form.date_field :ngayMuon %>
+  </div>
+
+  <div>
+    <%= form.label :ngayTra, style: "display: block" %>
+    <%= form.date_field :ngayTra %>
+  </div>
+
+  <div>
+    <%= form.label :soNgay, style: "display: block" %>
+    <%= form.number_field :soNgay %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

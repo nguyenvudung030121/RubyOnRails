@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="title-school" style="width: 410px;">
+    <p class="lead"
+        style="text-align: center ; font-weight: bold; font-family: 'Times New Roman', Times, serif; color: rgb(50, 205, 68);">
+        THƯ VIỆN</p>
+    <p class="lead"
+        style="margin-top: -20px;text-align: center ; font-weight: bold; font-family: 'Times New Roman', Times, serif; color: rgb(50, 205, 68);">
+        TRƯỜNG TIỂU HỌC PHONG THẠNH TÂY A
+    </p>
+    </div>
+    <p
+        style="text-align: center; font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 30px; color: red;">
+        <%= image_tag "open-book.png" %> QUẢN LÝ CHO HỌC SINH MƯỢN
+    </p>
+</div>
+<p style="color: green"><%= notice %></p>
+<table class="table table-striped" style="width: 110%">
+  <thead>
+    <tr>
+      <th scope="col-md-auto">STT</th>
+      <th scope="col-md-auto">Mã HS</th>
+      <th scope="col-md-auto">Họ và tên</th>
+      <th scope="col-md-auto">Lớp</th>
+      <th scope="col-md-auto">Mã sách</th>
+      <th scope="col-md-auto">Tên sách</th>
+      <th scope="col-md-auto">Tên tác giả</th>
+      <th scope="col-md-auto">Tủ sách</th>
+      <th scope="col-md-auto">Số BM</th>
+      <th scope="col-md-auto">Ngày mượn</th>
+      <th scope="col-md-auto">Ngày trả</th>
+      <th scope="col-md-auto">Số ngày</th>
+      <th scope="col-md-auto">Xem chi tiết</th>
+    </tr>
+  </thead>
+  <tbody>
+    <div id="ql_tvs">
+      <% @ql_tvs.each do |ql_tv| %> <%= render ql_tv %>
+      <!-- <p><%= link_to "Show this ql tv", ql_tv %></p> -->
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+<%= link_to "New ql tv" , new_ql_tv_path, class:"btn btn-primary" %>

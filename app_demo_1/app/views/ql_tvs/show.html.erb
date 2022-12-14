@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ql_tv %>
+
+<div>
+  <%= link_to "Edit this ql tv", edit_ql_tv_path(@ql_tv), class:"btn btn-primary" %> |
+  <%= link_to "Back to ql tvs", ql_tvs_path,class:"btn btn-light" %>
+
+  <%= button_to "Destroy this ql tv", @ql_tv, method: :delete,class:"btn btn-danger" %>
+</div>

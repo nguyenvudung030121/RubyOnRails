@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stt: 1
+  maHS: MyString
+  name: MyString
+  lop: MyString
+  maSach: MyString
+  tenSach: MyString
+  tenTG: MyString
+  tuSach: MyString
+  soBM: MyString
+  ngayMuon: 2022-11-04
+  ngayTra: 2022-11-04
+  soNgay: 1
+
+two:
+  stt: 1
+  maHS: MyString
+  name: MyString
+  lop: MyString
+  maSach: MyString
+  tenSach: MyString
+  tenTG: MyString
+  tuSach: MyString
+  soBM: MyString
+  ngayMuon: 2022-11-04
+  ngayTra: 2022-11-04
+  soNgay: 1

@@ -1,0 +1,2 @@
+class QlTv < ApplicationRecord
+end

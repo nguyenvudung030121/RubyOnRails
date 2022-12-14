@@ -1,0 +1,16 @@
+--create project Mysql: rails new [application name] -d mysql
+--vao Gemfile sửa thành: gem "tzinfo-data"
+--tao controller dau tien: rails g controller [ten] [index]
+--vào config/route:  sửa defines the root thành : root "home#index" (cài đặt trang chủ khi mới khởi động app)
+
+
+--TaoDB: 2 cách
+  - cách 1: tạo CRUD trước r sau đó tạo DB:
+        + link guides: https://guides.rubyonrails.org/active_record_migrations.html#creating-a-standalone-migration
+        + link data type: https://guides.rubyonrails.org/v3.2/migrations.html
+        + rails g model[hoặc scaffold nếu muốn CRUD] [tên DB migration] [tên trường 1: kiểu dữ liệu 1 (k đặt tên là id)] {dấu cách nếu có nhiều trường} [tên trường 2: kiểu dữ liệu 2] (rails tự động tạo 1 trường id là primary key)
+        +vd : rails g scaffold ql_tvs masv:string name:string class:string addr:string points:float 
+        + vào mysql tạo database
+        + rake db:migrate
+
+        (drop db: rails d model [tên model])
