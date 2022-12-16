@@ -25,7 +25,8 @@ class QlTvsController < ApplicationController
 
     respond_to do |format|
       if @ql_tv.save
-        format.html { redirect_to ql_tv_url(@ql_tv), notice: "Ql tv was successfully created." }
+        flash.now[:notice] = "We have exactly"
+        format.html { redirect_to ql_tv_url(@ql_tv), notice: "Tạo mới tài khoản thành công." }
         format.json { render :show, status: :created, location: @ql_tv }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +39,7 @@ class QlTvsController < ApplicationController
   def update
     respond_to do |format|
       if @ql_tv.update(ql_tv_params)
-        format.html { redirect_to ql_tv_url(@ql_tv), notice: "Ql tv was successfully updated." }
+        format.html { redirect_to ql_tv_url(@ql_tv), notice: "Cập nhật tài khoản thành công." }
         format.json { render :show, status: :ok, location: @ql_tv }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +53,7 @@ class QlTvsController < ApplicationController
     @ql_tv.destroy
 
     respond_to do |format|
-      format.html { redirect_to ql_tvs_url, notice: "Ql tv was successfully destroyed." }
+      format.html { redirect_to ql_tvs_url, notice: "Xóa tài khoản thành công." }
       format.json { head :no_content }
     end
   end
@@ -65,6 +66,6 @@ class QlTvsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def ql_tv_params
-      params.require(:ql_tv).permit(:masv, :name, :stu_class, :addr, :points)
+      params.require(:ql_tv).permit(:sv_id, :sv_name, :sv_class, :sv_addr, :sv_dob, :password, :password_confirmation)
     end
 end

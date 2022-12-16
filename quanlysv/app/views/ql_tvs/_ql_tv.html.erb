@@ -1,30 +1,25 @@
 <div id="<%= dom_id ql_tv %>">
-<tr>
-  <td scope="row">
-    <%= ql_tv.id %>
-  </td>
   <td>
-    <%= ql_tv.masv %>
+    <%= ql_tv.sv_id %>
+  </td>
+  
+  <td>
+    <%= ql_tv.sv_name %>
   </td>
 
   <td>
-    <%= ql_tv.name %>
+    <%= ql_tv.sv_class %>
   </td>
 
   <td>
-    <%= ql_tv.stu_class %>
+    <%= ql_tv.sv_addr %>
   </td>
 
   <td>
-    <%= ql_tv.addr %>
-  </td>
-
-  <td>
-    <%= ql_tv.points %>
-  </td>
-
-  <td>
-    <%= link_to "Xem chi tiết", ql_tv %>
-  </td>
-</tr>
+    <%= ql_tv.sv_dob.strftime('%d-%m-%Y')  %>
+    </td>
+  <%# <td>
+    <%= ql_tv.password_digest %>
+  <%# </td>  %>
+  <td><%= link_to "Xem chi tiết", ql_tv %></td>
 </div>

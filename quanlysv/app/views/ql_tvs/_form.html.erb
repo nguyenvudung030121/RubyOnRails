@@ -1,8 +1,7 @@
 <%= form_with(model: ql_tv) do |form| %>
   <% if ql_tv.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(ql_tv.errors.count, "error") %> prohibited this ql_tv from being saved:</h2>
-
+      <h4><%= pluralize(ql_tv.errors.count, "error") %></h4>
       <ul>
         <% ql_tv.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -12,31 +11,52 @@
   <% end %>
 
   <div>
-    <%= form.label :masv, style: "display: block" %>
-    <%= form.text_field :masv %>
+    <label for="exampleInputEmail1">Mã sinh viên</label>
+    <%# <%= form.label :sv_id, style: "display: block" %>
+    <%= form.text_field :sv_id, class:"form-control",placeholder: "Nhập mã sinh viên", style:"width:290px" %>
   </div>
 
   <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <label for="exampleInputEmail1">Họ và tên</label>
+    <%# <%= form.label :sv_id, style: "display: block" %>
+    <%= form.text_field :sv_name, class:"form-control",placeholder: "Nhập họ và tên", style:"width:290px" %>
   </div>
 
   <div>
-    <%= form.label :stu_class, style: "display: block" %>
-    <%= form.text_field :stu_class %>
+    <label for="exampleInputEmail1">Lớp sinh hoạt</label>
+    <%# <%= form.label :sv_id, style: "display: block" %>
+    <%= form.text_field :sv_class, class:"form-control",placeholder: "Nhập lớp sinh hoạt", style:"width:290px" %>
   </div>
 
   <div>
-    <%= form.label :addr, style: "display: block" %>
-    <%= form.text_field :addr %>
+    <label for="exampleInputEmail1">Địa chỉ</label>
+    <%# <%= form.label :sv_id, style: "display: block" %>
+    <%= form.text_field :sv_addr, class:"form-control",placeholder: "Nhập địa chỉ", style:"width:290px" %>
+  </div>
+  <div>
+    <label for="exampleInputEmail1">Ngày sinh</label>
+    <%# <%= form.label :sv_dob, style: "display: block" %>
+    <%= form.date_field :sv_dob,class:"form-control",placeholder:"Chọn ngày sinh",style:"width:290px" %>
   </div>
 
   <div>
-    <%= form.label :points, style: "display: block" %>
-    <%= form.text_field :points %>
+    <label for="exampleInputEmail1">Mật khẩu</label>
+    <%# <%= form.label :sv_id, style: "display: block" %>
+    <%= form.password_field :password, class:"form-control",placeholder: "Nhập mật khẩu", style:"width:290px" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <label for="exampleInputEmail1">Nhập lại mật khẩu</label>
+    <%# <%= form.label :sv_id, style: "display: block" %>
+    <%= form.password_field :password_confirmation, class:"form-control",placeholder: "Nhập lại mật khẩu", style:"width:290px" %>
+  </div>
+
+  <div>
+    <br>
+      <%= if request.url.include? "edit" 
+            form.submit "Cập nhật", class:"btn btn-primary"
+          else
+            form.submit "Tạo mới", class:"btn btn-primary"
+          end %>
   </div>
 <% end %>

@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_14_091709) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_15_125321) do
   create_table "ql_tvs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "masv"
-    t.string "name"
-    t.string "stu_class"
-    t.string "addr"
-    t.float "points"
+    t.string "sv_id"
+    t.string "sv_name"
+    t.string "sv_class"
+    t.string "sv_addr"
+    t.date "sv_dob"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["sv_id"], name: "index_ql_tvs_on_sv_id", unique: true
   end
 
 end

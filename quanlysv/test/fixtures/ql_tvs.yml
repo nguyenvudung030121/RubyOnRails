@@ -1,17 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  masv: MyString
-  primary_key: MyString
-  name: MyString
-  class: MyString
-  addr: MyString
-  points: 1.5
+  sv_id: MyString
+  sv_name: MyString
+  sv_class: MyString
+  sv_addr: MyString
+  sv_dob: 2022-12-14
+  sv_password: MyString
 
 two:
-  masv: MyString
-  primary_key: MyString
-  name: MyString
-  class: MyString
-  addr: MyString
-  points: 1.5
+  sv_id: MyString
+  sv_name: MyString
+  sv_class: MyString
+  sv_addr: MyString
+  sv_dob: 2022-12-14
+  sv_password: MyString

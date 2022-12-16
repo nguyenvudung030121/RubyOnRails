@@ -17,7 +17,7 @@ class QlTvsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ql_tv" do
     assert_difference("QlTv.count") do
-      post ql_tvs_url, params: { ql_tv: { : @ql_tv., addr: @ql_tv.addr, class: @ql_tv.class, masv: @ql_tv.masv, name: @ql_tv.name, points: @ql_tv.points } }
+      post ql_tvs_url, params: { ql_tv: { sv_addr: @ql_tv.sv_addr, sv_class: @ql_tv.sv_class, sv_dob: @ql_tv.sv_dob, sv_id: @ql_tv.sv_id, sv_name: @ql_tv.sv_name, sv_password: @ql_tv.sv_password } }
     end
 
     assert_redirected_to ql_tv_url(QlTv.last)
@@ -34,7 +34,7 @@ class QlTvsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update ql_tv" do
-    patch ql_tv_url(@ql_tv), params: { ql_tv: { : @ql_tv., addr: @ql_tv.addr, class: @ql_tv.class, masv: @ql_tv.masv, name: @ql_tv.name, points: @ql_tv.points } }
+    patch ql_tv_url(@ql_tv), params: { ql_tv: { sv_addr: @ql_tv.sv_addr, sv_class: @ql_tv.sv_class, sv_dob: @ql_tv.sv_dob, sv_id: @ql_tv.sv_id, sv_name: @ql_tv.sv_name, sv_password: @ql_tv.sv_password } }
     assert_redirected_to ql_tv_url(@ql_tv)
   end
 
