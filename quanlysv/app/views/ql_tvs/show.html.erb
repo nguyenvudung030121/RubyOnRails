@@ -11,7 +11,7 @@
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" id="firstName" class="form-control form-control-lg" value="<%= @ql_tv.sv_name %>">
+                    <input type="text" id="firstName" class="form-control form-control-lg" disabled value="<%= @ql_tv.sv_name %>">
                     <label class="form-label" for="firstName">Họ và tên</label>
                   </div>
 
@@ -19,7 +19,7 @@
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" id="lastName" class="form-control form-control-lg" value="<%= @ql_tv.sv_id %>" />
+                    <input type="text" id="lastName" class="form-control form-control-lg" disabled value="<%= @ql_tv.sv_id %>" />
                     <label class="form-label" for="lastName">Mã sinh viên</label>
                   </div>
 
@@ -30,7 +30,7 @@
                 <div class="col-md-6 mb-4 d-flex align-items-center">
 
                   <div class="form-outline datepicker w-100">
-                    <input type="text" class="form-control form-control-lg" id="birthdayDate" value="<%= @ql_tv.sv_dob.strftime('%d-%m-%Y') %>" />
+                    <input type="text" class="form-control form-control-lg" id="birthdayDate" disabled value="<%= @ql_tv.sv_dob.strftime('%d-%m-%Y') %>" />
                     <label for="birthdayDate" class="form-label">Ngày sinh</label>
                   </div>
 
@@ -42,7 +42,7 @@
                 <div class="col-md-6 mb-4 pb-2">
 
                   <div class="form-outline">
-                    <input type="text" id="emailAddress" class="form-control form-control-lg" value="<%= @ql_tv.sv_addr %>" />
+                    <input type="text" id="emailAddress" class="form-control form-control-lg" disabled value="<%= @ql_tv.sv_addr %>" />
                     <label class="form-label" for="emailAddress">Địa chỉ</label>
                   </div>
 
@@ -50,7 +50,7 @@
                 <div class="col-md-6 mb-4 pb-2">
 
                   <div class="form-outline">
-                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" value="<%= @ql_tv.sv_class %>" />
+                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" disabled value="<%= @ql_tv.sv_class %>" />
                     <label class="form-label" for="phoneNumber">Lớp sinh hoạt</label>
                   </div>
 

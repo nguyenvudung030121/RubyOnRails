@@ -9,46 +9,46 @@
       </ul>
     </div>
   <% end %>
-
+  <p style="color: green"><%= notice %></p>
   <div>
     <label for="exampleInputEmail1">Mã sinh viên</label>
     <%# <%= form.label :sv_id, style: "display: block" %>
-    <%= form.text_field :sv_id, class:"form-control",placeholder: "Nhập mã sinh viên", style:"width:290px" %>
+    <%= form.text_field :sv_id, class:"form-control", placeholder: "Nhập mã sinh viên", style:"width:290px",required:'required' %>
   </div>
 
   <div>
     <label for="exampleInputEmail1">Họ và tên</label>
     <%# <%= form.label :sv_id, style: "display: block" %>
-    <%= form.text_field :sv_name, class:"form-control",placeholder: "Nhập họ và tên", style:"width:290px" %>
+    <%= form.text_field :sv_name, class:"form-control",placeholder: "Nhập họ và tên", style:"width:290px",required:'required' %>
   </div>
 
   <div>
     <label for="exampleInputEmail1">Lớp sinh hoạt</label>
     <%# <%= form.label :sv_id, style: "display: block" %>
-    <%= form.text_field :sv_class, class:"form-control",placeholder: "Nhập lớp sinh hoạt", style:"width:290px" %>
+    <%= form.text_field :sv_class, class:"form-control",placeholder: "Nhập lớp sinh hoạt", style:"width:290px",required:'required' %>
   </div>
 
   <div>
     <label for="exampleInputEmail1">Địa chỉ</label>
     <%# <%= form.label :sv_id, style: "display: block" %>
-    <%= form.text_field :sv_addr, class:"form-control",placeholder: "Nhập địa chỉ", style:"width:290px" %>
+    <%= form.text_field :sv_addr, class:"form-control",placeholder: "Nhập địa chỉ", style:"width:290px",required:'required' %>
   </div>
   <div>
     <label for="exampleInputEmail1">Ngày sinh</label>
     <%# <%= form.label :sv_dob, style: "display: block" %>
-    <%= form.date_field :sv_dob,class:"form-control",placeholder:"Chọn ngày sinh",style:"width:290px" %>
+    <%= form.date_field :sv_dob,class:"form-control",placeholder:"Chọn ngày sinh",style:"width:290px",required:'required' %>
   </div>
 
   <div>
     <label for="exampleInputEmail1">Mật khẩu</label>
     <%# <%= form.label :sv_id, style: "display: block" %>
-    <%= form.password_field :password, class:"form-control",placeholder: "Nhập mật khẩu", style:"width:290px" %>
+    <%= form.password_field :password, class:"form-control",placeholder: "Nhập mật khẩu", style:"width:290px",required:'required' %>
   </div>
 
   <div>
     <label for="exampleInputEmail1">Nhập lại mật khẩu</label>
     <%# <%= form.label :sv_id, style: "display: block" %>
-    <%= form.password_field :password_confirmation, class:"form-control",placeholder: "Nhập lại mật khẩu", style:"width:290px" %>
+    <%= form.password_field :password_confirmation, class:"form-control",placeholder: "Nhập lại mật khẩu", style:"width:290px",required:'required' %>
   </div>
 
   <div>

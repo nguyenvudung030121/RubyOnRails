@@ -31,7 +31,7 @@ class QlTvsController < ApplicationController
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @ql_tv.errors, status: :unprocessable_entity }
-      end
+      end 
     end
   end
 
